@@ -1,13 +1,13 @@
-Name: pairs
-Summary: A memory and pairs game for KDE
-Version: 4.8.97
-Release: 1
-Group: Education
-License: GPLv2 and LGPLv2 and GFDL
-URL: http://edu.kde.org/applications/all/pairs
-Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/%name-%version.tar.xz
-BuildRequires: kdelibs4-devel >= 2:%{version}
-BuildRequires: desktop-file-utils
+Name:		pairs
+Summary:	A memory and pairs game for KDE
+Version:	4.9.4
+Release:	1
+Group:		Graphical desktop/KDE
+License:	GPLv2 and LGPLv2 and GFDL
+URL:		http://edu.kde.org/applications/all/pairs
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	kdelibs4-devel
+BuildRequires:	desktop-file-utils
 
 %description
 Pairs is a game that will help train your memory by remembering different
@@ -24,10 +24,9 @@ images, shapes, sounds and text.
 
 %prep
 %setup -q
-%apply_patches
 
 %build
-%cmake_kde4  -DKDE4_ENABLE_FINAL=ON
+%cmake_kde4
 %make
 
 %install
@@ -35,4 +34,15 @@ images, shapes, sounds and text.
 
 desktop-file-install --dir %{buildroot}%{_kde_applicationsdir} \
 	%{buildroot}%{_kde_applicationsdir}/*.desktop
+
+
+%changelog
+* Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
+- New version 4.9.4
+- Spec cleanup
+
+* Sun Jul 15 2012 Crispin Boylan <crisb@mandriva.org> 4.8.97-1
++ Revision: 809468
+- Initial package (from mageia)
+- Created package structure for 'pairs'.
 
