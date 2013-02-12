@@ -7,7 +7,7 @@ License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://edu.kde.org/applications/all/pairs
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
-BuildRequires:	desktop-file-utils
+Suggests:	%{name}-editor
 
 %description
 Pairs is a game that will help train your memory by remembering different
@@ -22,6 +22,20 @@ images, shapes, sounds and text.
 
 #------------------------------------------------------------------------------
 
+%package editor
+Summary:	Editor for pairs
+Requires:	%{name} = %{EVRD}
+
+%description editor
+This package provides an editor for KDE game pairs.
+
+%files editor
+%{_kde_bindir}/pairseditor
+%{_kde_applicationsdir}/pairseditor.desktop
+%{_kde_appsdir}/pairseditor/pairseditorui.rc
+
+#------------------------------------------------------------------------------
+
 %prep
 %setup -q
 
@@ -32,13 +46,11 @@ images, shapes, sounds and text.
 %install
 %makeinstall_std -C build
 
-desktop-file-install --dir %{buildroot}%{_kde_applicationsdir} \
-	%{buildroot}%{_kde_applicationsdir}/*.desktop
-
-
 %changelog
 * Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
 - New version 4.10.0
+- New subpackage editor
+- Minor spec cleanup
 
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
 - New version 4.9.4
