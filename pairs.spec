@@ -30,6 +30,7 @@ Requires:	%{name} = %{EVRD}
 This package provides an editor for KDE game pairs.
 
 %files editor
+%doc %{_kde_docdir}/HTML/en/pairseditor
 %{_kde_bindir}/pairseditor
 %{_kde_applicationsdir}/pairseditor.desktop
 %{_kde_appsdir}/pairseditor/pairseditorui.rc
@@ -49,6 +50,7 @@ This package provides an editor for KDE game pairs.
 %changelog
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.0-1
 - New version 4.11.0
+- Update files list
 
 * Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.5-1
 - New version 4.10.5
