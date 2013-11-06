@@ -1,6 +1,6 @@
 Name:		pairs
 Summary:	A memory and pairs game for KDE
-Version:	4.11.2
+Version:	4.11.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
@@ -48,6 +48,9 @@ This package provides an editor for KDE game pairs.
 %makeinstall_std -C build
 
 %changelog
+* Wed Nov 06 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.3-1
+- New version 4.11.3
+
 * Wed Oct 02 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.2-1
 - New version 4.11.2
 
