@@ -1,7 +1,7 @@
 Name:		pairs
 Summary:	A memory and pairs game for KDE
 Version:	4.12.1
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://edu.kde.org/applications/all/pairs
