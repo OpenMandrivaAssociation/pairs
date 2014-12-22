@@ -1,11 +1,11 @@
-Name:		pairs
 Summary:	A memory and pairs game for KDE
-Version:	4.13.3
-Release:	1
+Name:		pairs
+Version:	4.14.3
+Release:	2
+License:	GPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 and LGPLv2 and GFDL
-URL:		http://edu.kde.org/applications/all/pairs
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Url:		http://edu.kde.org/applications/all/pairs
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 Suggests:	%{name}-editor
 
@@ -14,13 +14,14 @@ Pairs is a game that will help train your memory by remembering different
 images, shapes, sounds and text.
 
 %files
-%{_kde_bindir}/pairs
 %{_kde_applicationsdir}/pairs.desktop
 %{_kde_appsdir}/pairs
+%{_kde_bindir}/pairs
 %{_kde_configdir}/pairs.knsrc
+%{_kde_datadir}/appdata/pairs.appdata.xml
 %{_kde_iconsdir}/*/*/*/*
 
-#------------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 
 %package editor
 Summary:	Editor for pairs
@@ -35,7 +36,7 @@ This package provides an editor for KDE game pairs.
 %{_kde_applicationsdir}/pairseditor.desktop
 %{_kde_appsdir}/pairseditor/pairseditorui.rc
 
-#------------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 
 %prep
 %setup -q
@@ -48,6 +49,16 @@ This package provides an editor for KDE game pairs.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
+- New version 4.14.3
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
+- New version 4.14.2
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
+- New version 4.14.1
+- Update files
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
 
