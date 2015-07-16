@@ -5,8 +5,8 @@ Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/applications/all/pairs
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	kdelibs-devel
 Suggests:	%{name}-editor
 
 %description
@@ -14,12 +14,12 @@ Pairs is a game that will help train your memory by remembering different
 images, shapes, sounds and text.
 
 %files
-%{_kde_applicationsdir}/pairs.desktop
-%{_kde_appsdir}/pairs
-%{_kde_bindir}/pairs
-%{_kde_configdir}/pairs.knsrc
-%{_kde_datadir}/appdata/pairs.appdata.xml
-%{_kde_iconsdir}/*/*/*/*
+%{_datadir}/applications/kde4/pairs.desktop                                                            
+%{_datadir}/apps/pairs                                                                                 
+%{_bindir}/pairs                                                                                       
+%{_datadir}/config/pairs.knsrc                                                                         
+%{_datadir}/appdata/pairs.appdata.xml                                                                  
+%{_iconsdir}/*/*/*/*  
 
 #----------------------------------------------------------------------------
 
@@ -31,10 +31,10 @@ Requires:	%{name} = %{EVRD}
 This package provides an editor for KDE game pairs.
 
 %files editor
-%doc %{_kde_docdir}/HTML/en/pairseditor
-%{_kde_bindir}/pairseditor
-%{_kde_applicationsdir}/pairseditor.desktop
-%{_kde_appsdir}/pairseditor/pairseditorui.rc
+%doc %{_docdir}/HTML/en/pairseditor                                                                    
+%{_bindir}/pairseditor                                                                                 
+%{_datadir}/applications/kde4/pairseditor.desktop                                                      
+%{_datadir}/apps/pairseditor/pairseditorui.rc     
 
 #----------------------------------------------------------------------------
 
@@ -47,78 +47,4 @@ This package provides an editor for KDE game pairs.
 
 %install
 %makeinstall_std -C build
-
-%changelog
-* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
-- New version 4.14.3
-
-* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
-- New version 4.14.2
-
-* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
-- New version 4.14.1
-- Update files
-
-* Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
-- New version 4.13.3
-
-* Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.2-1
-- New version 4.13.2
-
-* Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.4-1
-- New version 4.12.4
-
-* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.3-1
-- New version 4.12.3
-
-* Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.2-1
-- New version 4.12.2
-
-* Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.1-1
-- New version 4.12.1
-
-* Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.4-1
-- New version 4.11.4
-
-* Wed Nov 06 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.3-1
-- New version 4.11.3
-
-* Wed Oct 02 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.2-1
-- New version 4.11.2
-
-* Tue Sep 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.1-1
-- New version 4.11.1
-
-* Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.0-1
-- New version 4.11.0
-- Update files list
-
-* Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.5-1
-- New version 4.10.5
-
-* Wed Jun 05 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.4-1
-- New version 4.10.4
-
-* Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
-- New version 4.10.3
-
-* Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
-- New version 4.10.2
-
-* Sat Mar 09 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.1-1
-- New version 4.10.1
-
-* Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
-- New version 4.10.0
-- New subpackage editor
-- Minor spec cleanup
-
-* Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
-- New version 4.9.4
-- Spec cleanup
-
-* Sun Jul 15 2012 Crispin Boylan <crisb@mandriva.org> 4.8.97-1
-+ Revision: 809468
-- Initial package (from mageia)
-- Created package structure for 'pairs'.
 
