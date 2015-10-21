@@ -1,7 +1,7 @@
 Summary:	A memory and pairs game for KDE
 Name:		pairs
-Version:	15.04.3
-Release:	3
+Version:	15.08.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/applications/all/pairs
@@ -14,12 +14,12 @@ Pairs is a game that will help train your memory by remembering different
 images, shapes, sounds and text.
 
 %files
-%{_datadir}/applications/kde4/pairs.desktop                                                            
-%{_datadir}/apps/pairs                                                                                 
-%{_bindir}/pairs                                                                                       
-%{_datadir}/config/pairs.knsrc                                                                         
-%{_datadir}/appdata/pairs.appdata.xml                                                                  
-%{_iconsdir}/*/*/*/*  
+%{_datadir}/applications/kde4/pairs.desktop
+%{_datadir}/apps/pairs
+%{_bindir}/pairs
+%{_datadir}/config/pairs.knsrc
+%{_datadir}/appdata/pairs.appdata.xml
+%{_iconsdir}/*/*/*/*
 
 #----------------------------------------------------------------------------
 
@@ -31,10 +31,10 @@ Requires:	%{name} = %{EVRD}
 This package provides an editor for KDE game pairs.
 
 %files editor
-%doc %{_docdir}/HTML/en/pairseditor                                                                    
-%{_bindir}/pairseditor                                                                                 
-%{_datadir}/applications/kde4/pairseditor.desktop                                                      
-%{_datadir}/apps/pairseditor/pairseditorui.rc     
+%doc %{_docdir}/HTML/en/pairseditor
+%{_bindir}/pairseditor
+%{_datadir}/applications/kde4/pairseditor.desktop
+%{_datadir}/apps/pairseditor/pairseditorui.rc
 
 #----------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ This package provides an editor for KDE game pairs.
 %setup -q
 
 %build
-%cmake_kde4
+%cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=3.1
 %make
 
 %install
