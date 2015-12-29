@@ -1,7 +1,7 @@
 Summary:	A memory and pairs game for KDE
 Name:		pairs
 Version:	15.04.3
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/applications/all/pairs
