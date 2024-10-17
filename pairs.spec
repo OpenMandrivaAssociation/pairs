@@ -4,7 +4,7 @@ Version:	15.04.3
 Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://edu.kde.org/applications/all/pairs
+Url:		https://edu.kde.org/applications/all/pairs
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs-devel
 Suggests:	%{name}-editor
